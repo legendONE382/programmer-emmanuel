@@ -3,387 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emmanuel | AI Systems & Software Engineer</title>
-  <meta name="description" content="Portfolio of Emmanuel — building practical AI-powered systems, workflow automations, and scalable web applications.">
-  <meta name="keywords" content="AI systems, automation, software engineering, portfolio, internship, RAG, web applications">
+  <title>Emmanuel | AI Product Engineer</title>
+  <meta name="description" content="Premium portfolio for Emmanuel — AI product engineer building practical business automation, RAG systems, and real-world SaaS products.">
+  <meta name="keywords" content="AI engineer, product engineer, SaaS, portfolio, RAG, business automation, TradePulse, VoltWatch AI, AskDocs">
   <meta name="author" content="Emmanuel">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #070b16;
-      --bg-soft: #0f1629;
-      --surface: rgba(20, 30, 58, 0.55);
-      --surface-strong: rgba(18, 29, 59, 0.92);
-      --text: #f8fafc;
-      --text-muted: #b6c2da;
-      --border: rgba(148, 163, 184, 0.25);
-      --accent: #5b7fff;
-      --accent-soft: #8ea6ff;
-      --good: #95f9c3;
-      --radius: 16px;
-      --shadow: 0 20px 40px rgba(2, 6, 23, 0.45);
+      --bg: #030711;
+      --bg-2: #07111f;
+      --surface: rgba(9, 18, 34, 0.72);
+      --surface-strong: rgba(13, 25, 47, 0.9);
+      --text: #f8fbff;
+      --text-muted: #aab7cc;
+      --border: rgba(166, 184, 216, 0.18);
+      --accent: #41e6b0;
+      --accent-2: #6d7cff;
+      --accent-3: #ffcf6a;
+      --danger: #ff7e9d;
+      --radius: 24px;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at 12% 10%, #152a5f 0%, transparent 32%),
-        radial-gradient(circle at 85% 18%, #1a1f51 0%, transparent 35%),
+      background:
+        linear-gradient(rgba(3, 7, 17, 0.88), rgba(3, 7, 17, 0.95)),
+        url('me.png') center top / cover fixed,
         var(--bg);
       color: var(--text);
       line-height: 1.65;
       overflow-x: hidden;
     }
 
-    .container {
-      width: min(1120px, 92%);
-      margin: 0 auto;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 18% 8%, rgba(65, 230, 176, 0.26), transparent 28%),
+        radial-gradient(circle at 85% 16%, rgba(109, 124, 255, 0.3), transparent 32%),
+        radial-gradient(circle at 55% 92%, rgba(255, 207, 106, 0.12), transparent 24%);
+      z-index: -1;
     }
+
+    .container { width: min(1180px, 92%); margin: 0 auto; }
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(7, 11, 22, 0.86);
-      backdrop-filter: blur(12px);
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(3, 7, 17, 0.76);
+      backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--border);
     }
 
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-      gap: 1rem;
-    }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; gap: 1rem; }
+    .logo { color: var(--text); font-weight: 900; letter-spacing: -0.04em; text-decoration: none; font-size: 1.2rem; }
+    .logo span { color: var(--accent); }
+    .nav-links { list-style: none; display: flex; flex-wrap: wrap; gap: 1.1rem; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.94rem; font-weight: 600; transition: 0.2s ease; }
+    .nav-links a:hover { color: var(--accent); }
 
-    .logo {
-      font-weight: 800;
-      letter-spacing: 0.4px;
-      color: var(--accent-soft);
-      text-decoration: none;
-    }
+    section { padding: 6rem 0; }
+    .eyebrow { color: var(--accent); font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; margin-bottom: 0.9rem; }
 
-    .nav-links {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
+    .hero { min-height: 100vh; display: grid; align-items: center; padding-top: 7rem; }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 3rem; align-items: center; }
+    h1 { font-size: clamp(2.65rem, 6vw, 5.6rem); line-height: 0.96; letter-spacing: -0.07em; margin-bottom: 1.2rem; }
+    .gradient-text { background: linear-gradient(120deg, #fff 10%, var(--accent) 42%, var(--accent-2) 78%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero-sub { color: #d8e2f2; font-size: clamp(1.05rem, 1.7vw, 1.28rem); max-width: 62ch; margin-bottom: 1.5rem; }
+    .hero-note { color: var(--accent-3); font-weight: 700; margin-bottom: 2rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.9rem; align-items: center; }
+    .btn { border-radius: 999px; padding: 0.86rem 1.25rem; text-decoration: none; font-weight: 800; border: 1px solid transparent; transition: 0.22s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), #74ffd2); color: #03100c; box-shadow: 0 18px 42px rgba(65, 230, 176, 0.28); }
+    .btn-primary:hover, .btn-secondary:hover { transform: translateY(-3px); }
+    .btn-secondary { color: var(--text); border-color: var(--border); background: rgba(255,255,255,0.04); }
 
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: 0.2s ease;
-    }
+    .hero-visual { position: relative; background: linear-gradient(145deg, rgba(255,255,255,0.11), rgba(255,255,255,0.035)); border: 1px solid var(--border); border-radius: 34px; padding: 1rem; box-shadow: var(--shadow); overflow: hidden; }
+    .hero-visual::before { content:""; position:absolute; inset:-35%; background: conic-gradient(from 90deg, transparent, rgba(65,230,176,.28), transparent, rgba(109,124,255,.32), transparent); animation: spin 12s linear infinite; opacity:.65; }
+    .hero-visual-inner { position: relative; background: rgba(3,7,17,.86); border: 1px solid var(--border); border-radius: 26px; padding: 1rem; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .hero-visual img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 20px; border: 1px solid var(--border); display: block; }
+    .profile-strip { display: flex; align-items: center; gap: 1rem; padding-top: 1rem; }
+    .avatar { width: 62px; height: 62px; object-fit: cover; object-position: center top; border-radius: 50%; border: 2px solid rgba(65,230,176,.65); }
+    .profile-strip p { color: var(--text-muted); font-size: 0.92rem; }
 
-    .nav-links a:hover { color: var(--text); }
+    .proof-bar { padding: 1.1rem 0; border-block: 1px solid var(--border); background: rgba(255,255,255,0.045); backdrop-filter: blur(14px); }
+    .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .proof-item { text-align: center; font-weight: 800; color: #e9f1ff; }
+    .proof-item span { display: block; color: var(--text-muted); font-weight: 600; font-size: .85rem; }
 
-    section { padding: 5rem 0; }
+    .section-title { font-size: clamp(2rem, 4vw, 3.45rem); line-height: 1; letter-spacing: -0.05em; margin-bottom: 1rem; }
+    .section-sub { color: var(--text-muted); max-width: 76ch; margin-bottom: 2.4rem; font-size: 1.05rem; }
 
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      align-items: center;
-      padding-top: 6rem;
-      position: relative;
-    }
-
-    .hero::before,
-    .hero::after {
-      content: "";
-      position: absolute;
-      border-radius: 999px;
-      filter: blur(60px);
-      z-index: -1;
-      opacity: 0.6;
-    }
-
-    .hero::before {
-      width: 240px;
-      height: 240px;
-      background: #4260d9;
-      top: 6rem;
-      right: 8%;
-    }
-
-    .hero::after {
-      width: 200px;
-      height: 200px;
-      background: #4f7cf0;
-      bottom: 8rem;
-      left: 5%;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 4vw, 3.75rem);
-      line-height: 1.15;
-      margin-bottom: 1rem;
-    }
-
-    .hero-sub {
-      color: var(--text-muted);
-      font-size: 1.08rem;
-      margin-bottom: 1.4rem;
-      max-width: 56ch;
-    }
-
-    .hero-note {
-      color: var(--good);
-      font-weight: 600;
-      margin-bottom: 1.8rem;
-      font-size: 0.96rem;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-    }
-
-    .btn {
-      border-radius: 999px;
-      padding: 0.75rem 1.2rem;
-      text-decoration: none;
-      font-weight: 600;
-      border: 1px solid transparent;
-      transition: 0.2s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(130deg, var(--accent), #6f8cff);
-      color: #fff;
-      box-shadow: 0 12px 30px rgba(91, 127, 255, 0.4);
-    }
-
-    .btn-primary:hover { transform: translateY(-2px); }
-
-    .btn-secondary {
-      background: transparent;
-      border-color: var(--border);
-      color: var(--text);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--accent-soft);
-      color: var(--accent-soft);
-    }
-
-    .hero-visual {
-      background: var(--surface-strong);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1.4rem;
-    }
-
-    .hero-visual img {
-      width: 100%;
-      display: block;
-      border-radius: 12px;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-      margin-bottom: 1rem;
-    }
-
-    .hero-visual p {
-      color: var(--text-muted);
-      font-size: 0.92rem;
-    }
-
-    .proof-bar {
-      background: rgba(91, 127, 255, 0.1);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 0;
-    }
-
-    .proof-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      text-align: center;
-      font-weight: 600;
-      color: #dbe5ff;
-    }
-
-    .section-title {
-      font-size: clamp(1.5rem, 3vw, 2.2rem);
-      margin-bottom: 1rem;
-    }
-
-    .section-sub {
-      color: var(--text-muted);
-      max-width: 70ch;
-      margin-bottom: 2.2rem;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.2rem;
-    }
-
-    .project {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      transition: 0.2s ease;
-    }
-
-    .project:hover {
-      transform: translateY(-3px);
-      border-color: rgba(142, 166, 255, 0.55);
-    }
-
-    .project h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.7rem;
-      color: #e5edff;
-    }
-
-    .project p { color: var(--text-muted); margin-bottom: 0.55rem; font-size: 0.95rem; }
-
+    .projects-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
+    .project { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: .25s ease; }
+    .project:hover { transform: translateY(-6px); border-color: rgba(65,230,176,.48); }
+    .project img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; border-bottom: 1px solid var(--border); }
+    .project-body { padding: 1.35rem; }
+    .project-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: .75rem; }
+    .project h3 { font-size: 1.38rem; line-height: 1.15; color: #fff; }
+    .badge { white-space: nowrap; color: #03100c; background: var(--accent); padding: .25rem .62rem; border-radius: 999px; font-size: .72rem; font-weight: 900; }
+    .project p { color: var(--text-muted); margin-bottom: .72rem; font-size: .96rem; }
     .project p strong { color: var(--text); }
+    .tags { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0; }
+    .tag { font-size: .78rem; border: 1px solid rgba(166,184,216,.26); border-radius: 999px; padding: .25rem .62rem; color: #dbe7f7; background: rgba(255,255,255,.04); }
+    .project-links { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 1rem; }
+    .project-links a { color: var(--accent); text-decoration: none; font-weight: 800; }
+    .project-links a:hover { text-decoration: underline; }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.85rem 0;
-    }
-
-    .tag {
-      font-size: 0.78rem;
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      border-radius: 999px;
-      padding: 0.22rem 0.6rem;
-      color: #d3ddf5;
-    }
-
-    .project-links {
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-      margin-top: 0.8rem;
-    }
-
-    .project-links a {
-      color: var(--accent-soft);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .stack-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .stack-card,
-    .philosophy,
-    .about,
-    .cta-card,
-    .contact-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.2rem;
-    }
-
-    .stack-card h3,
-    .philosophy h3,
-    .about h3,
-    .cta-card h3,
-    .contact-card h3 {
-      margin-bottom: 0.7rem;
-      font-size: 1.05rem;
-      color: #e5edff;
-    }
-
+    .panel-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
+    .panel, .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; }
+    .panel h3, .contact-card h3 { margin-bottom: .7rem; }
+    .panel p, .panel li, .contact-card p, .contact-card li { color: var(--text-muted); }
     ul { padding-left: 1.1rem; }
+    li { margin-bottom: .45rem; }
 
-    .list-clean li,
-    .philosophy li,
-    .contact-links li {
-      margin-bottom: 0.45rem;
-      color: var(--text-muted);
-    }
+    .about-shell { display: grid; grid-template-columns: .85fr 1.15fr; gap: 1.2rem; align-items: stretch; }
+    .about-photo { min-height: 430px; border-radius: var(--radius); border: 1px solid var(--border); background: url('Chose FB_IMG_17371213329734809.jpg') center 18% / cover; box-shadow: var(--shadow); }
+    .about-copy { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; }
+    .about-copy p { color: var(--text-muted); margin-bottom: 1rem; }
 
-    .about p,
-    .cta-card p,
-    .contact-card p {
-      color: var(--text-muted);
-      margin-bottom: 0.9rem;
-    }
+    .cta-card { text-align: center; background: linear-gradient(135deg, rgba(65,230,176,.18), rgba(109,124,255,.16)); border: 1px solid var(--border); border-radius: 32px; padding: 3rem 1.5rem; box-shadow: var(--shadow); }
+    .cta-card p { color: var(--text-muted); margin: .7rem auto 1.4rem; max-width: 62ch; }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 1rem; }
+    .contact-links { list-style: none; padding: 0; }
+    .contact-links a { color: var(--accent); text-decoration: none; }
+    .field { width: 100%; margin-bottom: .75rem; padding: .8rem .9rem; border-radius: 14px; border: 1px solid var(--border); background: rgba(2, 7, 17, .74); color: var(--text); font: inherit; }
+    textarea.field { min-height: 130px; resize: vertical; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    footer { border-top: 1px solid var(--border); padding: 2rem 0; color: var(--text-muted); text-align: center; font-size: .92rem; }
 
-    .cta-card { text-align: center; }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .contact-links a {
-      color: var(--accent-soft);
-      text-decoration: none;
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem 0;
-      color: var(--text-muted);
-      text-align: center;
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 900px) {
-      .hero-grid,
-      .projects-grid,
-      .stack-grid,
-      .contact-grid { grid-template-columns: 1fr; }
-
-      .proof-grid { grid-template-columns: 1fr; gap: 0.7rem; }
-
-      .nav { flex-direction: column; align-items: flex-start; }
+    @media (max-width: 930px) {
+      body { background-attachment: scroll; }
+      .hero-grid, .projects-grid, .panel-grid, .about-shell, .contact-grid { grid-template-columns: 1fr; }
+      .proof-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav { align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: .75rem; }
+      section { padding: 4.5rem 0; }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <a class="logo" href="#home">Emmanuel</a>
+      <a class="logo" href="#home">Emmanuel<span>.</span></a>
       <ul class="nav-links">
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#stack">Tech Stack</a></li>
+        <li><a href="#stack">Stack</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -394,92 +167,84 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
-          <h1>I build AI-powered systems that automate real workflows and scale efficiently.</h1>
-          <p class="hero-sub">Focused on practical AI, automation, and scalable web applications.</p>
-          <p class="hero-note">Currently seeking a technical internship in AI &amp; software engineering.</p>
+          <p class="eyebrow">AI Product Engineer • Business Automation • RAG</p>
+          <h1>Building <span class="gradient-text">premium AI products</span> for real business problems.</h1>
+          <p class="hero-sub">I design and ship practical software systems for commerce, documents, operations, and infrastructure monitoring — products that are clear, useful, and ready to grow.</p>
+          <p class="hero-note"><i class="fa-solid fa-bolt"></i> Available for internships, freelance builds, and AI-focused product teams.</p>
           <div class="cta-row">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-secondary">Download Resume</a>
+            <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-layer-group"></i> Explore Projects</a>
+            <a href="mailto:ue9938090@gmail.com" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Hire / Contact Me</a>
           </div>
         </div>
-        <div class="hero-visual">
-          <img src="Chose FB_IMG_17371213329734809.jpg" alt="Project interface preview">
-          <p>Recent build snapshot: AI workflow dashboard designed for speed, clarity, and scalable automation.</p>
+        <div class="hero-visual" aria-label="Featured portfolio project preview">
+          <div class="hero-visual-inner">
+            <img src="tradepulse.png" alt="TradePulse business management dashboard preview">
+            <div class="profile-strip">
+              <img class="avatar" src="Chose FB_IMG_17371213329734809.jpg" alt="Portrait of Emmanuel">
+              <p><strong>Emmanuel</strong><br>Software builder focused on polished AI tools that solve daily workflow pain.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <div class="proof-bar">
       <div class="container proof-grid">
-        <div>Built 10+ practical projects</div>
-        <div>Focused on AI automation systems</div>
-        <div>Experience solving real workflow bottlenecks</div>
+        <div class="proof-item">4<span>flagship projects</span></div>
+        <div class="proof-item">AI-first<span>product direction</span></div>
+        <div class="proof-item">SaaS-ready<span>web interfaces</span></div>
+        <div class="proof-item">Real problems<span>not demo-only ideas</span></div>
       </div>
     </div>
 
     <section id="projects">
       <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-sub">A focused set of systems that show end-to-end execution: problem framing, architecture decisions, and measurable outcome.</p>
+        <p class="eyebrow">Featured work</p>
+        <h2 class="section-title">Projects built with market-fit thinking.</h2>
+        <p class="section-sub">Each project targets a concrete user pain: small-business records, customer operations, power reliability, and document intelligence.</p>
 
         <div class="projects-grid">
           <article class="project">
-            <h3>AI Document Assistant</h3>
-            <p><strong>Problem:</strong> Teams spent too much time manually searching long documents.</p>
-            <p><strong>Solution:</strong> Built a retrieval system that extracts context and answers user questions instantly.</p>
-            <p><strong>Technical Approach:</strong> Python backend, embeddings pipeline, vector retrieval, and a lightweight chat interface.</p>
-            <p><strong>Outcome:</strong> Reduced document lookup time and improved daily workflow speed.</p>
-            <div class="tags">
-              <span class="tag">Python</span><span class="tag">RAG</span><span class="tag">Embeddings</span><span class="tag">Supabase</span>
-            </div>
-            <div class="project-links">
-              <a href="#">Live Demo</a>
-              <a href="#">GitHub Repo</a>
+            <img src="tradepulse.png" alt="TradePulse project screenshot">
+            <div class="project-body">
+              <div class="project-top"><h3>TradePulse 🚀</h3><span class="badge">Live</span></div>
+              <p><strong>What it is:</strong> A WhatsApp-first business management platform for small businesses, freelancers, side hustlers, shop owners, and agents.</p>
+              <p><strong>Why it matters:</strong> It helps users track sales, expenses, debts, customer transactions, and performance without complicated accounting software.</p>
+              <div class="tags"><span class="tag">Business SaaS</span><span class="tag">WhatsApp-first</span><span class="tag">Sales Tracking</span><span class="tag">Emerging Markets</span></div>
+              <div class="project-links"><a href="https://tradepule-rose.vercel.app" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/legendONE382/Trade-Pulse" target="_blank" rel="noopener">GitHub</a></div>
             </div>
           </article>
 
           <article class="project">
-            <h3>Voice-to-Content Engine</h3>
-            <p><strong>Problem:</strong> Capturing ideas from meetings and voice notes was inconsistent and slow.</p>
-            <p><strong>Solution:</strong> Developed an AI pipeline that transcribes speech and structures it into usable content.</p>
-            <p><strong>Technical Approach:</strong> Audio ingestion API, transcription service, prompt orchestration, and storage for reusable outputs.</p>
-            <p><strong>Outcome:</strong> Automated repetitive documentation and improved publishing turnaround.</p>
-            <div class="tags">
-              <span class="tag">Python</span><span class="tag">APIs</span><span class="tag">PostgreSQL</span><span class="tag">Vercel</span>
-            </div>
-            <div class="project-links">
-              <a href="#">Live Demo</a>
-              <a href="#">GitHub Repo</a>
+            <img src="me.png" alt="Estech AI Copilot Business project preview">
+            <div class="project-body">
+              <div class="project-top"><h3>Estech AI Copilot Business 🤖</h3><span class="badge">AI OS</span></div>
+              <p><strong>What it is:</strong> An AI-powered business workspace that acts as a company's digital copilot.</p>
+              <p><strong>Why it matters:</strong> It can automate customer conversations, generate business documents, organize company knowledge, and support operations from one platform.</p>
+              <div class="tags"><span class="tag">AI Copilot</span><span class="tag">Knowledge Base</span><span class="tag">Operations</span><span class="tag">Automation</span></div>
+              <div class="project-links"><a href="https://github.com/legendONE382/estech-ai-copilot-business" target="_blank" rel="noopener">GitHub</a><a href="#contact">Request Demo</a></div>
             </div>
           </article>
 
           <article class="project">
-            <h3>Market Research Summarizer</h3>
-            <p><strong>Problem:</strong> Manually collecting and summarizing web research across sources was time-intensive.</p>
-            <p><strong>Solution:</strong> Built a workflow that gathers source data, processes content, and generates concise summaries.</p>
-            <p><strong>Technical Approach:</strong> Data collection scripts, normalization, summarization prompts, and API-first delivery.</p>
-            <p><strong>Outcome:</strong> Saved hours of repetitive analysis and improved consistency of reports.</p>
-            <div class="tags">
-              <span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">NLP</span><span class="tag">Automation</span>
-            </div>
-            <div class="project-links">
-              <a href="#">Live Demo</a>
-              <a href="#">GitHub Repo</a>
+            <img src="voltwatchai.png" alt="VoltWatch AI voltage monitoring dashboard screenshot">
+            <div class="project-body">
+              <div class="project-top"><h3>VoltWatch AI ⚡</h3><span class="badge">Unique</span></div>
+              <p><strong>What it is:</strong> An AI-powered voltage monitoring platform for individuals and businesses tracking power fluctuations.</p>
+              <p><strong>Why it matters:</strong> It surfaces voltage issues and electricity reliability insights for regions with unstable power infrastructure.</p>
+              <div class="tags"><span class="tag">Monitoring</span><span class="tag">AI Insights</span><span class="tag">Infrastructure</span><span class="tag">Energy Tech</span></div>
+              <div class="project-links"><a href="https://volt-watch-ai.vercel.app" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/legendONE382/VoltWatch-AI" target="_blank" rel="noopener">GitHub</a></div>
             </div>
           </article>
 
           <article class="project">
-            <h3>Workflow Automation Dashboard</h3>
-            <p><strong>Problem:</strong> Repetitive status updates and manual process checks slowed internal teams.</p>
-            <p><strong>Solution:</strong> Created a dashboard that tracks workflow states and triggers automated actions.</p>
-            <p><strong>Technical Approach:</strong> Event-driven backend, webhooks, database triggers, and role-based front-end views.</p>
-            <p><strong>Outcome:</strong> Improved process visibility and reduced manual follow-up work.</p>
-            <div class="tags">
-              <span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Webhooks</span><span class="tag">HTML/CSS</span>
-            </div>
-            <div class="project-links">
-              <a href="#">Live Demo</a>
-              <a href="#">GitHub Repo</a>
+            <img src="askdocs.png" alt="AskDocs AI document assistant screenshot">
+            <div class="project-body">
+              <div class="project-top"><h3>AskDocs 📄</h3><span class="badge">RAG</span></div>
+              <p><strong>What it is:</strong> An AI document assistant that lets users upload files and ask context-aware questions about them.</p>
+              <p><strong>Why it matters:</strong> It demonstrates practical AI engineering with retrieval-augmented generation instead of generic chatbot answers.</p>
+              <div class="tags"><span class="tag">RAG</span><span class="tag">Documents</span><span class="tag">Embeddings</span><span class="tag">AI Search</span></div>
+              <div class="project-links"><a href="https://askdocs-nine.vercel.app/" target="_blank" rel="noopener">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/legendONE382/Askdocs" target="_blank" rel="noopener">GitHub</a></div>
             </div>
           </article>
         </div>
@@ -488,63 +253,25 @@
 
     <section id="stack">
       <div class="container">
-        <h2 class="section-title">Tech Stack</h2>
-        <div class="stack-grid">
-          <div class="stack-card">
-            <h3>Languages</h3>
-            <ul class="list-clean">
-              <li>Python (AI, automation)</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
-          <div class="stack-card">
-            <h3>Frontend</h3>
-            <ul class="list-clean">
-              <li>HTML, CSS, JavaScript</li>
-              <li>React / Next.js (project-dependent)</li>
-            </ul>
-          </div>
-          <div class="stack-card">
-            <h3>Backend &amp; Data</h3>
-            <ul class="list-clean">
-              <li>Supabase</li>
-              <li>PostgreSQL</li>
-              <li>REST APIs</li>
-            </ul>
-          </div>
-          <div class="stack-card">
-            <h3>AI Systems &amp; Tools</h3>
-            <ul class="list-clean">
-              <li>RAG pipelines</li>
-              <li>Embeddings + local LLM workflows</li>
-              <li>Git, Vercel</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="philosophy">
-          <h3>Engineering Philosophy</h3>
-          <ul>
-            <li>Build systems, not scripts.</li>
-            <li>Automate repetitive work wherever possible.</li>
-            <li>Keep architectures simple, clear, and scalable.</li>
-            <li>Focus on practical usefulness over hype.</li>
-          </ul>
+        <p class="eyebrow">Capabilities</p>
+        <h2 class="section-title">A builder's stack for modern AI products.</h2>
+        <div class="panel-grid">
+          <div class="panel"><h3>Product Engineering</h3><ul><li>Responsive, conversion-focused interfaces</li><li>End-to-end SaaS workflows</li><li>Clear dashboards and user journeys</li></ul></div>
+          <div class="panel"><h3>AI Systems</h3><ul><li>RAG document assistants</li><li>Business copilots and automations</li><li>Prompted workflows and AI insights</li></ul></div>
+          <div class="panel"><h3>Tools</h3><ul><li>JavaScript, React / Next.js, HTML, CSS</li><li>Python, APIs, Supabase, PostgreSQL</li><li>GitHub and Vercel deployment workflows</li></ul></div>
         </div>
       </div>
     </section>
 
     <section id="about">
-      <div class="container">
-        <div class="about">
-          <h3>About</h3>
-          <p>I focus on building practical AI systems that automate tasks and improve efficiency.</p>
-          <p>I work with lightweight, scalable tools to design solutions that solve real workflow problems.</p>
-          <p>I enjoy turning ideas into working systems and continuously improving how they perform.</p>
+      <div class="container about-shell">
+        <div class="about-photo" role="img" aria-label="Portrait of Emmanuel"></div>
+        <div class="about-copy">
+          <p class="eyebrow">About Emmanuel</p>
+          <h2 class="section-title">I build products with clarity, polish, and practical AI value.</h2>
+          <p>I care about software that people can understand quickly and use immediately. My strongest projects are not just technical experiments — they are products aimed at real operational pain.</p>
+          <p>My focus areas include AI copilots, document intelligence, business automation, and dashboards that make complex information easier to act on.</p>
+          <p>I am looking for opportunities where I can contribute to real product work, learn from experienced teams, and keep shipping systems that matter.</p>
         </div>
       </div>
     </section>
@@ -552,11 +279,12 @@
     <section>
       <div class="container">
         <div class="cta-card">
-          <h3>Want to work together?</h3>
-          <p>I’m currently looking for an internship where I can contribute to real-world AI and software projects.</p>
-          <div class="cta-row" style="justify-content: center;">
-            <a href="#contact" class="btn btn-primary">Contact Me</a>
-            <a href="#contact" class="btn btn-secondary">Download Resume</a>
+          <p class="eyebrow">Let's build</p>
+          <h2 class="section-title">Need an AI-focused product builder?</h2>
+          <p>I can help turn an idea into a clean, demo-ready product with professional visuals, usable workflows, and a strong technical foundation.</p>
+          <div class="cta-row" style="justify-content:center;">
+            <a href="mailto:ue9938090@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email Me</a>
+            <a href="https://github.com/legendONE382" target="_blank" rel="noopener" class="btn btn-secondary"><i class="fa-brands fa-github"></i> View GitHub</a>
           </div>
         </div>
       </div>
@@ -565,32 +293,24 @@
     <section id="contact">
       <div class="container contact-grid">
         <div class="contact-card">
-          <h3>Contact</h3>
-          <p>Easy to reach — no friction.</p>
+          <p class="eyebrow">Contact</p>
+          <h3>Open to internships, collaborations, and freelance AI builds.</h3>
+          <p>Send a clear message and I will respond as soon as possible.</p>
           <ul class="contact-links">
-            <li>Email: <a href="mailto:ue9938090@gmail.com">ue9938090@gmail.com</a></li>
-            <li>GitHub: <a href="https://github.com/legendONE382">github.com/legendONE382</a></li>
-            <li>LinkedIn: <a href="https://linkedin.com">linkedin.com</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:ue9938090@gmail.com">ue9938090@gmail.com</a></li>
+            <li><i class="fa-brands fa-github"></i> <a href="https://github.com/legendONE382" target="_blank" rel="noopener">github.com/legendONE382</a></li>
+            <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn profile</a></li>
           </ul>
         </div>
 
         <div class="contact-card">
           <h3>Quick Message</h3>
-          <p>If you prefer, send a message directly:</p>
+          <p>Use this form to open your email client with a draft message.</p>
           <form action="mailto:ue9938090@gmail.com" method="POST" enctype="text/plain">
-            <label>
-              <span class="sr-only">Your Name</span>
-              <input style="width:100%;margin-bottom:0.7rem;padding:0.65rem;border-radius:10px;border:1px solid var(--border);background:rgba(10,16,34,0.85);color:var(--text);" type="text" name="name" placeholder="Your Name" required>
-            </label>
-            <label>
-              <span class="sr-only">Your Email</span>
-              <input style="width:100%;margin-bottom:0.7rem;padding:0.65rem;border-radius:10px;border:1px solid var(--border);background:rgba(10,16,34,0.85);color:var(--text);" type="email" name="email" placeholder="Your Email" required>
-            </label>
-            <label>
-              <span class="sr-only">Message</span>
-              <textarea style="width:100%;min-height:120px;margin-bottom:0.8rem;padding:0.65rem;border-radius:10px;border:1px solid var(--border);background:rgba(10,16,34,0.85);color:var(--text);" name="message" placeholder="Your Message" required></textarea>
-            </label>
-            <button class="btn btn-primary" type="submit">Send Message</button>
+            <label><span class="sr-only">Your Name</span><input class="field" type="text" name="name" placeholder="Your name" required></label>
+            <label><span class="sr-only">Your Email</span><input class="field" type="email" name="email" placeholder="Your email" required></label>
+            <label><span class="sr-only">Message</span><textarea class="field" name="message" placeholder="Tell me what you want to build..." required></textarea></label>
+            <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
           </form>
         </div>
       </div>
@@ -599,8 +319,7 @@
 
   <footer>
     <div class="container">
-      <p>Emmanuel • 2026</p>
-      <p style="margin-top:0.4rem;">GitHub • LinkedIn • Email</p>
+      <p>Emmanuel • AI Product Engineer • 2026</p>
     </div>
   </footer>
 </body>
